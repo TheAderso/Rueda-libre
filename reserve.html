@@ -1,48 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reserva de bicicleta</title>
 </head>
 <body>
+
     <main>
         <form action="">
             <fieldset>
-                <legend>Formulario de Reserva</legend>
+                <legend>Reserva tu bicicleta</legend>
 
                 <p>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
                 </p>
+
                 <p>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
                 </p>
+
                 <p>
-                    <label for="date">Fecha:</label>
-                    <input type="date" name="date" id="date" required>
+                    <label for="fecha">Día de la reserva:</label>
+                    <input type="date" id="fecha" name="fecha" required>
                 </p>
+
                 <p>
-                    <label for="tipe-bicicleta">Tipo de Bicicleta:</label>
-                    <select name="tipe-bicicleta" id="tipe-bicicleta" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="montaña">Montaña</option>
-                        <option value="carretera">Carretera</option>
-                        <option value="eléctrica">Eléctrica</option>
+                    <label for="bicicleta">¿Qué bicicleta prefieres?</label>
+                    <select id="bicicleta" name="bicicleta" required>
+                        <option value="">Elige una bicicleta</option>
+                        <option value="montaña">Bicicleta de montaña</option>
+                        <option value="carretera">Bicicleta de carretera</option>
+                        <option value="electrica">Bicicleta eléctrica</option>
                     </select>
                 </p>
-
             </fieldset>
 
             <p>
-                <button type="submit">Reservar</button>
+                <button type="submit">Enviar reserva</button>
             </p>
-
         </form>
     </main>
 
-    <a href="index.html">Volver al inicio</a>
+    <p><a href="index.html">Regresar a la página principal</a></p>
 
 </body>
 </html>
