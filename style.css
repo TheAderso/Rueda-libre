@@ -413,3 +413,152 @@ button:hover {
         transition: none !important;
     }
 }
+/* ==========================================================
+   7. NAVEGACIÓN Y BOTONES MODERNOS
+   ========================================================== */
+
+/* Enlaces que funcionan como botones */
+body > a,
+main a:not([href^="#"]):not(.enlace-normal),
+nav a,
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 22px;
+    margin: 5px 4px;
+
+    background: linear-gradient(
+        135deg,
+        var(--verde),
+        var(--verde-oscuro)
+    );
+
+    color: var(--blanco);
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    border: 2px solid transparent;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 10px rgba(31, 90, 67, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+/* Efecto al pasar el mouse */
+body > a:hover,
+main a:not([href^="#"]):not(.enlace-normal):hover,
+nav a:hover,
+.boton:hover {
+    background: var(--amarillo);
+    color: var(--verde-oscuro);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(31, 90, 67, 0.18);
+}
+
+/* Efecto al hacer clic */
+body > a:active,
+main a:not([href^="#"]):not(.enlace-normal):active,
+nav a:active,
+.boton:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* Contenedor de navegación */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 14px;
+    margin: 18px 0 24px;
+
+    background: var(--blanco);
+    border: 1px solid var(--menta-borde);
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
+}
+
+/* Enlaces dentro de la navegación */
+nav a {
+    margin: 0;
+    flex: 1 1 145px;
+    text-align: center;
+}
+
+/* Botón amarillo para acciones importantes */
+.boton-principal {
+    background: linear-gradient(
+        135deg,
+        var(--amarillo),
+        var(--amarillo-hover)
+    );
+
+    color: var(--verde-oscuro);
+}
+
+/* Hover del botón principal */
+.boton-principal:hover {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+/* Botón secundario más suave */
+.boton-secundario {
+    background: var(--menta);
+    color: var(--verde-oscuro);
+    border-color: var(--menta-borde);
+    box-shadow: none;
+}
+
+.boton-secundario:hover {
+    background: var(--amarillo);
+    border-color: var(--amarillo);
+    color: var(--verde-oscuro);
+}
+
+/* Botones de navegación en móviles */
+@media (max-width: 600px) {
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 12px;
+    }
+
+    nav a {
+        width: 100%;
+        min-height: 48px;
+        padding: 10px 8px;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    body > a {
+        padding: 10px 16px;
+    }
+}
+
+/* Accesibilidad: reducir movimiento si está configurado */
+@media (prefers-reduced-motion: reduce) {
+    body > a,
+    main a,
+    nav a,
+    .boton {
+        transition: none;
+    }
+}
